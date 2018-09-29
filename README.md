@@ -54,10 +54,12 @@ Install latest from BCM2835 from : http://www.airspayce.com/mikem/bcm2835/
 
 Installation of twowire library software :
 
-1. cd /home/pi
-2. tar -zxf twowire.tar.gz
-3. cd twowire
-4. create the dynamic library : make install
+1. download the zip-file (clone or download / download zip-file) in the wanted directory
+2. unzip twowire-master.zip (*1)
+3. cd twowire-master
+4. make install
+
+*1) if you do not have unzip : sudo apt-get install zip unzip
 
 “make install” will create and install a dynamic library,. If needed “make install-static” creates a static library,  In the software directory you will find the following files 
 
