@@ -31,7 +31,7 @@
 * GNU Lesser General Public License for more details.
 *
 * You should have received a copy of the GNU Lesser General Public License
-* along with twowire.  If not, see <http://www.gnu.org/licenses/>.
+* along with wiringPi.  If not, see <http://www.gnu.org/licenses/>.
 *********************************************************************/
 
 
@@ -85,6 +85,7 @@ struct twowire_s
     bool              hw_initialized;         // set if hardware has been initialized
     uint8_t          Slave_address;          // holds the slave address
     bool              dbmes;                  // true = display driver messages
+    bool              Pullup;                 // Pullup resistor on SDA/SCL line
 };
 
 // define which I2C to use
@@ -247,6 +248,9 @@ public:
     /* enable/disable messages from driver: true or false(default) */
     void setDebug(bool db);
     
+    /* set for internal pullup resistor on the SDA & SCL GPIO */
+    void setPullup();
+     
     /* Initialize the I2C communicator 
      * 
      * Itoc: soft_I2C for software I2C 

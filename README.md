@@ -1,10 +1,13 @@
 ﻿
 # twowire (I2C) library for Raspberry Pi
 
-# version 1.0	initial version
+Copyright (c) Paul van Haastrecht <paulvha@hotmail.com>
 
-Copyright (c) September 2018 Paul van Haastrecht <paulvha@hotmail.com>
+# version 1.0	September 2018 
+initial version 
 
+# version 2.0   October 2018
+Added setpullup() call
 
 ## Background
 The BCM2835 chip provides I2C communication protocol from the hardware. However the clock stretching implementation is bad, leading to many issues with slave devices that depend on or use  clock stretching to handle the requests. (e.g. CCS811, SCD30 ) This library can handle that. 
