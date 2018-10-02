@@ -676,11 +676,7 @@ bool TwCore::twi_write_start(void) {
   SDA_HIGH();
 
   /* error in cabling */
-  if (SDA_READ() == 0)
-  {
-      printf("%s na read\n",__func__);
-      return(false);
-   }
+  if (SDA_READ() == 0)  return(false);
 
   /* wait half clock time */
   twi_delay(twSetting.twi_dcount);
